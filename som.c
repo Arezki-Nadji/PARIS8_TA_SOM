@@ -15,7 +15,7 @@ struct Net_Config
 	int nb_it;//noombre d'itération
 	double minAlpha; //taux d'apprentissage initial
 	int train; //combien de couche
-	int ftrain ; // taux d'apprentissage 1/4 puis 3/4 
+	int ftrain ; // taux d'apprentissage 1/5 puis 4/5
 }Net_Config;
 
 struct node //Neuron
@@ -244,9 +244,9 @@ void init_Net_Confing()
 		Net_Config.n_colonne_out=10;
 		Net_Config.n_out=Net_Config.n_ligne_out*Net_Config.n_colonne_out;
 		Net_Config.data_in=4;
-		Net_Config.nb_it=2000;
+		Net_Config.nb_it=3000;
 		Net_Config.minAlpha=0.7;
-		Net_Config.ftrain=Net_Config.nb_it/4;
+		Net_Config.ftrain=Net_Config.nb_it/5;
 		Net_Config.train=2;
 	}
 struct voisinageTaille{
